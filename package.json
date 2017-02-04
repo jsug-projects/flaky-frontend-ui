@@ -99,7 +99,7 @@
         }
       },
       "github:twbs/bootstrap@3.3.7": {
-        "main": "js/bootstrap.js",
+        "main": "dist/js/bootstrap.js",
         "dependencies": {
           "jquery": "jspm:jquery@*"
         },
@@ -110,14 +110,16 @@
           "css"
         ],
         "meta": {
-          "js/bootstrap.js": {
+          "../dist/js/bootstrap.js": {
             "deps": [
               "jquery"
             ],
             "exports": "$",
             "format": "global"
           }
-        }
+        },
+        "format": "detect",
+        "map": {}
       },
       "npm:browserify-zlib@0.1.4": {
         "dependencies": {
