@@ -12,7 +12,7 @@ const paths = {
 		'src/jspm_packages*/**/*.woff',
 		'src/jspm_packages*/**/*.woff2'
 	],
-    html: 'src/index-bundle.html',
+    html: 'src/index.html',
 	dest: 'build/dist/META-INF/resources/'
 };
 
@@ -43,7 +43,7 @@ gulp.task('copy-assets', function () {
 // copy html
 gulp.task('copy-html', function () {
     gulp.src(paths.html)
-		.pipe(rename('index.html'))
+		//.pipe(rename('index.html'))
         .pipe(gulp.dest(paths.dest));
 });
 

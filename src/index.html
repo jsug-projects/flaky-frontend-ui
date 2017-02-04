@@ -1,22 +1,12 @@
 <!doctype html>
-<html lang="ja">
+<html>
 	<head>
-		<meta charset="utf-8">
-		<title>Flaky Frontend UI</title>
-		<script src="jspm_packages/system.js"></script>
-		<script src="jspm.config.js"></script>
-		<style>
-			body {
-				min-height: 2000px;
-				padding-top: 70px;
-			}
-		</style>
+		<meta charset="utf-8" />
+		<title>Flaky</title>
+		<link rel="stylesheet" href="static/index.bundle.css" media="all" />
 	</head>
 	<body>
-		<app data-authorized="true"></app>
-		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyBWlSbqotj0ITPS6bXyG_MWKxJmwTxw2j8&sensor=false"></script>
-		<script>
-			SystemJS.import('index.js');
-		</script>
+		<app></app>
+		<script src="static/index.bundle.js"></script>
 	</body>
 </html>
