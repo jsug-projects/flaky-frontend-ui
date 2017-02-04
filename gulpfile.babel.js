@@ -11,7 +11,7 @@ const paths = {
 		'src/jspm_packages*/**/*.woff',
 		'src/jspm_packages*/**/*.woff2'
 	],
-	dest: 'build/dist/'
+	dest: 'build/dist/META-INF/resources/'
 };
 
 // build JSPM modules
