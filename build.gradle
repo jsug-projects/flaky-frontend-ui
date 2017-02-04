@@ -9,7 +9,11 @@ buildscript {
     }
 }
 
+group = 'jsug.flaky'
+version = '0.0.1'
+
 apply plugin: 'java'
+apply plugin: 'maven'
 apply plugin: 'com.moowork.node'
 apply plugin: 'com.moowork.gulp'
 
@@ -30,4 +34,12 @@ jar {
     baseName = 'flaky-frontend-ui'
     from jsBuildDir
     includeEmptyDirs = false
+}
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: "file:${System.getProperty('user.home')}/.m2/repository")
+        }
+    }
 }
