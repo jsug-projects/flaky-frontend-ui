@@ -19,7 +19,11 @@ SystemJS.config({
   transpiler: "plugin-babel",
   map: {
     "tag": "systemjs-riot.js",
-    "riot-compiler": "npm:riot-compiler@3.1.1"
+    "riot-compiler": "npm:riot-compiler@3.1.1",
+    "sortablejs": "npm:sortablejs@1.5.0-rc1",
+    "i18next": "npm:i18next@4.0.0",
+    "i18next-browser-languagedetector": "npm:i18next-browser-languagedetector@1.0.1",
+    "i18next-xhr-backend": "npm:i18next-xhr-backend@1.2.1"
   }
 });
 
@@ -30,7 +34,7 @@ SystemJS.config({
     "github:*/*.json"
   ],
   map: {
-    "sortablejs": "npm:sortablejs@1.5.0-rc1",
+    "bootstrap": "github:twbs/bootstrap@3.3.7",
     "less": "github:systemjs/plugin-less@0.1.2",
     "sweetalert": "npm:sweetalert@1.1.3",
     "assert": "npm:jspm-nodelibs-assert@0.2.0",
@@ -49,9 +53,6 @@ SystemJS.config({
     "fsevents": "npm:fsevents@1.0.15",
     "http": "npm:jspm-nodelibs-http@0.2.0",
     "https": "npm:jspm-nodelibs-https@0.2.1",
-    "i18next": "npm:i18next@4.0.0",
-    "i18next-browser-languagedetector": "npm:i18next-browser-languagedetector@1.0.1",
-    "i18next-xhr-backend": "npm:i18next-xhr-backend@1.2.1",
     "jodid25519": "npm:jodid25519@1.0.2",
     "jquery": "npm:jquery@3.1.1",
     "jsbn": "npm:jsbn@0.1.0",
@@ -910,6 +911,11 @@ SystemJS.config({
     "github:systemjs/plugin-less@0.1.2": {
       "map": {
         "css": "github:systemjs/plugin-css@0.1.32"
+      }
+    },
+    "github:twbs/bootstrap@3.3.7": {
+      "map": {
+        "jquery": "npm:jquery@3.1.1"
       }
     }
   }

@@ -1,16 +1,17 @@
 import * as riot from 'riot';
 import route from 'riot-route'
 import $ from 'jquery';
-// import bootstrap from 'bootstrap';
-import semantic from 'semantic-ui';
+import bootstrap from 'bootstrap';
+// import semantic from 'semantic-ui';
 import swal from 'sweetalert';
 import NProgress from 'nprogress';
 
 import 'tags/app.tag!';
 import 'tags/main.tag!';
 import 'tags/home.tag!';
-
-// import 'styles/style.less!';
+import 'jspm_packages/github/twbs/bootstrap@3.3.7/dist/css/bootstrap.css!';
+//import 'styles/style.less!';
+import 'tags/app.tag!';
 
 $.ajaxSetup({
 	error: (x, status, error) => {
