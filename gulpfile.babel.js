@@ -1,5 +1,6 @@
 import gulp from 'gulp';
 import systemjs from 'gulp-systemjs-builder';
+import rename from 'gulp-rename';
 import webserver from 'gulp-webserver';
 
 const paths = {
@@ -11,6 +12,7 @@ const paths = {
 		'src/jspm_packages*/**/*.woff',
 		'src/jspm_packages*/**/*.woff2'
 	],
+    html: 'src/index-bundle.html',
 	dest: 'build/dist/META-INF/resources/'
 };
 
@@ -38,6 +40,13 @@ gulp.task('copy-assets', function () {
 		.pipe(gulp.dest(paths.dest + 'static'));
 });
 
+// copy html
+gulp.task('copy-html', function () {
+    gulp.src(paths.html)
+		.pipe(rename('index.html'))
+        .pipe(gulp.dest(paths.dest));
+});
+
 gulp.task('watch', () => {
 });
 
@@ -58,6 +67,6 @@ gulp.task('webserver', ['watch'], () => {
 		}));
 });
 
-gulp.task('build', ['jspm', 'copy-assets']);
+gulp.task('build', ['jspm', 'copy-assets', 'copy-html']);
 
 gulp.task('default', ['webserver']);
